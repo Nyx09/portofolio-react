@@ -26,8 +26,7 @@ const INFO = {
 			logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
 			linkText: "View Project",
 			link: "https://github.com/Nyx09/portofolio-react",
-		}, 
-		{
+		}, {
 			title: "Dashboard Nextjs",
 			description:
 				"This project marks my journey into the world of Next.js, a powerful React framework that enables server-side rendering and static site generation. While developing the dashboard, I focused on leveraging Next.js features such as API routes for dynamic data fetching and built-in CSS support for styling.",
@@ -35,7 +34,12 @@ const INFO = {
 			linkText: "View Project",
 			link: "https://github.com/Nyx09/dashboardNextjs",
 		}
-	]
+	],
+	about: {
+		title: "I’m Nelvin Lee",
+		description:
+			"I am an SDET and application tester intern, proud to be a fresh graduate. Over the years, I've worked on various projects that have fueled my passion for quality assurance and software testing. Currently, I'm expanding my skill set by learning web development. I believe in the power of collaboration and continuous improvement, so I'm always eager to explore new ideas and receive feedback on my work.",
+	}
 };
 
 export default INFO;

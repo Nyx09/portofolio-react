@@ -7,8 +7,10 @@ import Logo from "../components/logo";
 import Socials from "../components/about/socials";
 
 import INFO from "../data/user";
+import "./styles/about.css"
 
 const About = () => {
+    document.title = `About - Nelvin Lee`;
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
@@ -41,7 +43,7 @@ const About = () => {
 								<div className="about-image-container">
 									<div className="about-image-wrapper">
 										<img
-											src="about.jpg"
+											src="homepage.jpg"
 											alt="about"
 											className="about-image"
 										/>
