@@ -9,9 +9,13 @@ import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 
 import Logo from "../components/logo";
 import NavBar from "../components/navbar";
+import Footer from "../components/footer";
+import Works from "../components/homepage/workExperience";
+import AllProjects from "../components/projects/allProjects";
 
 import INFO from "../data/user";
 import "./styles/homepage.css";
+
 // Constants for logo size
 const INITIAL_LOGO_SIZE = 80;
 const MIN_LOGO_SIZE = 40;
@@ -91,10 +95,10 @@ const Homepage = () => {
                         </div>
 
                         <div className="homepage-socials">
-                            <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub">
+                            <a href="https://github.com/Nyx09" target="_blank" rel="noreferrer" aria-label="GitHub">
                                 <FontAwesomeIcon icon={faGithub} className="homepage-social-icon" />
                             </a>
-                            <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+                            <a href="https://www.instagram.com/nlvn_l09/" target="_blank" rel="noreferrer" aria-label="Instagram">
                                 <FontAwesomeIcon icon={faInstagram} className="homepage-social-icon" />
                             </a>
                             <a href="mailto:leenelvin9@gmail.com" target="_blank" rel="noreferrer" aria-label="Email">
@@ -104,20 +108,20 @@ const Homepage = () => {
 
                         
                         
-                        {/* <div className="homepage-projects">
+                        <div className="homepage-projects">
                             <AllProjects />
                         </div>
                         <div className="homepage-works">
                             <Works />
-                        </div> */}
+                        </div>
                        
                     </div>
 
                     
                     
-                    {/* <div className="page-footer">
+                    <div className="page-footer">
                         <Footer />
-                    </div> */}
+                    </div>
                    
                 </div>
             </div>

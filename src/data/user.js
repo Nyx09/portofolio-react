@@ -7,8 +7,9 @@ const INFO = {
 	},
 
 	socials: {
-		github: "https://github.com/",
-		linkedin: "https://linkedin.com/",
+		github: "https://github.com/Nyx09",
+		linkedin: "https://linkedin.com/in/nelvin-lee/",
+		instagram: "https://www.instagram.com/nlvn_l09/"
 		
 	},
 
@@ -16,7 +17,25 @@ const INFO = {
 		title: "Software Engineering Development in Test and Quality Assurance with Experience",
 		description:
 			"I am an Quality Assurance (QA) and Software Development Engineer in Test (SDET). I am always looking for new challenges and opportunities to grow as a developer.",
-	}
+	},
+	projects: [
+		{
+			title: "Portofolio",
+			description:
+				"This portfolio project marks the beginning of my journey into the world of web development. It showcases the first React application I built while learning the fundamentals of the framework.",
+			logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+			linkText: "View Project",
+			link: "https://github.com/Nyx09/portofolio-react",
+		}, 
+		{
+			title: "Dashboard Nextjs",
+			description:
+				"This project marks my journey into the world of Next.js, a powerful React framework that enables server-side rendering and static site generation. While developing the dashboard, I focused on leveraging Next.js features such as API routes for dynamic data fetching and built-in CSS support for styling.",
+			logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+			linkText: "View Project",
+			link: "https://github.com/Nyx09/dashboardNextjs",
+		}
+	]
 };
 
 export default INFO;
