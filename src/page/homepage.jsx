@@ -104,21 +104,24 @@ const Homepage = () => {
                             <a href="mailto:leenelvin9@gmail.com" target="_blank" rel="noreferrer" aria-label="Email">
                                 <FontAwesomeIcon icon={faMailBulk} className="homepage-social-icon" />
                             </a>
+                            <div className="homepage-btn-download">
+                            <a
+                                href="/resume.pdf" 
+                                download="Nelvin_Lee_Resume.pdf" 
+                            >
+                                <button className="download-button">
+                                    Download Resume
+                                </button>
+                            </a>
                         </div>
-
-                        
-                        
+                        </div>
                         <div className="homepage-projects">
                             <AllProjects />
                         </div>
                         <div className="homepage-works">
                             <Works />
                         </div>
-                       
                     </div>
-
-                    
-                    
                     <div className="page-footer">
                         <Footer />
                     </div>

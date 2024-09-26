@@ -133,10 +133,24 @@
 	.homepage-articles {
 		flex-basis: auto;
 	}
-
-	.homepage-works {
-		flex-basis: auto;
-		margin-left: -25px;
-		margin-right: -25px;
+	.download-button:hover {
+		background-color: #2980b9;
 	}
+}
+.homepage-works {
+	flex-basis: auto;
+	margin-left: -25px;
+	margin-right: -25px;
+}
+.download-button {
+	background-color:var(--tertiary-color);
+	font:var(--primary-font) ;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 20px;
+	color: black;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
 }
