@@ -84,7 +84,7 @@ const Homepage = () => {
                                 <div className="homepage-image-container">
                                     <div className="homepage-image-wrapper">
                                         <img
-                                            src="homepage.jpg"
+                                            src="me.jpg"
                                             alt="About"
                                             className="homepage-image"
                                             onError={handleImageError}
