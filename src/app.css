@@ -5,21 +5,22 @@
 }
 
 ::-webkit-scrollbar-track {
-	background-color: #f1f1f1;
+	background-color: #2b2b2b; /* Darker background for scrollbar track */
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #383636;
+	background-color: #5c5c5c; /* Slightly lighter for the scrollbar thumb */
 	border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background-color: rgb(0, 0, 0);
+	background-color: #7a7a7a; /* Lighter hover color */
 }
 
 .page-content {
-	background-color: white;
+	background-color: #121212; /* Black background for the page */
 	position: relative;
+	color: #e0e0e0; /* Light text for better contrast */
 }
 
 .page-content:before,
@@ -29,8 +30,8 @@
 	top: 0;
 	bottom: 0;
 	width: calc((100% - 1200px) / 2);
-	background-color: #fafafa;
-	border: 1px solid #f4f4f5;
+	background-color: #1e1e1e; /* Darker grey background on the sides */
+	border: 1px solid #2a2a2a; /* Darker border color */
 }
 
 .page-content:before {
@@ -49,7 +50,7 @@
 }
 
 .title {
-	color: var(--primary-color);
+	color: #ffd100; /* Using a light purple (material black theme primary) */
 	font-family: var(--secondary-font);
 	font-size: 45px;
 	font-weight: 700;
@@ -58,7 +59,7 @@
 
 .subtitle {
 	padding-top: 10px;
-	color: var(--secondary-color);
+	color: #e0e0e0; /* Light text for contrast */
 	font-size: 16px;
 	line-height: 28px;
 	width: 70%;
@@ -74,7 +75,7 @@
 	position: absolute;
 	left: 0;
 	right: 0;
-	border-top: 2px solid var(--tertiary-color);
+	border-top: 2px solid #090909; /* Teal color (material black theme accent) */
 }
 
 @media (max-width: 1270px) {
