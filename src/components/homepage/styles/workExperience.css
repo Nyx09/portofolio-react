@@ -23,6 +23,8 @@
 	font-weight: 700;
 	padding-left: 20px;
 	margin-top: -3px;
+	padding-left: 50px;
+	position: absolute;
 	color: var(--quantery-color);
 }
 
@@ -40,5 +42,18 @@
 	font-size: 12px;
 	padding-top: 20px;
 	text-align: right;
+	position: absolute;
 	color: var(--quantery-color);
+}
+@media (max-width: 600px) {
+    .work {
+        position: relative; /* Ensure items adjust properly */
+    }
+	.work-duration {
+        position: static; /* Remove absolute positioning */
+        padding-left: 19px; /* Align with subtitle */
+        padding-top: 10px; /* Add space below subtitle */
+        margin-top: 30px;
+        text-align: left; /* Align text to the left */
+    }
 }
