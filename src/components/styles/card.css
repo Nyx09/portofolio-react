@@ -36,8 +36,9 @@
 }
 @media (max-width: 600px) {
     .card-container {
-        width: 80%;
-		
+        width: 100%;
+		padding-left: 30px;
+		padding-right: 30px;
     }
     .card-title {
         font-size: 12px;
