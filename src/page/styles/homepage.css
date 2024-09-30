@@ -134,9 +134,7 @@
 	.homepage-articles {
 		flex-basis: auto;
 	}
-	.download-button:hover {
-		background-color: #2980b9;
-	}
+	
 }
 .homepage-works {
 	flex-basis: auto;
@@ -154,4 +152,8 @@
 	font-size: 16px;
 	cursor: pointer;
 	transition: background-color 0.3s ease-in-out;
+}
+.download-button:hover {
+	background-color: #f5f5f6;
+	color: black;
 }
