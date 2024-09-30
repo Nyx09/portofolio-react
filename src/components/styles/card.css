@@ -34,3 +34,17 @@
 	padding-top: 40px;
 	font-size: 15px;
 }
+@media (max-width: 600px) {
+    .card-container {
+        width: 100%;
+    }
+    .card-title {
+        font-size: 12px;
+        padding-left: 10px;
+    }
+
+    .card-body {
+        padding-top: 20px;
+        font-size: 13px;
+    }
+}

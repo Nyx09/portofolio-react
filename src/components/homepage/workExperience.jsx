@@ -34,7 +34,7 @@ const Works = () => {
 							/>
 							<div className="work-title">Mandiri Utama Finance</div>
 							<div className="work-subtitle">
-								Aplication Tester 
+								Application Tester 
 							</div>
 							<div className="work-duration">2022 - 2023</div>
 						</div>
