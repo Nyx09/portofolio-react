@@ -6,6 +6,7 @@
 	margin-top: 50px;
 	padding-bottom: 25px;
 	align-items: center;
+	
 }
 
 .footer-links,
@@ -43,12 +44,15 @@
 	color: #fafafa;
 	font-size: 14px;
 	text-align: right;
+	
 }
 
 @media (max-width: 600px) {
 	.footer {
+		padding-bottom: 25px;
 		flex-direction: column;
-		height: 85px;
+		height: auto;
+		margin-left:60px ;
 	}
 
 	.footer-links {
@@ -59,5 +63,12 @@
 
 	.footer-nav-link-list {
 		width: 100%;
+	}
+	.footer-credits-text {
+		padding-top: 10px;
+
+		position: relative;
+		text-align: center;
+		padding-right:30px ;
 	}
 }

@@ -64,7 +64,7 @@
 .project-link {
 	display: flex;
 	align-items: center;
-	color: var(--secondary-color);
+	color: #e0e0e0;
 	font-size: 12px;
 	padding-top: 20px;
 }
@@ -85,6 +85,5 @@
 	}
 	.project-container{
 		height: max-content;
-		
 	}
 }
