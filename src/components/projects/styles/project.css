@@ -34,6 +34,7 @@
 	padding: 30px;
 	border: 1px solid #fafafa;
 	border-radius: 20px;
+	height: 400px;
 	
 }
 
@@ -78,6 +79,10 @@
 
 @media (max-width: 600px) {
 	.project {
-		height: 300px;
+		max-height: max-content;
+	}
+	.project-container{
+		height: max-content;
+		
 	}
 }

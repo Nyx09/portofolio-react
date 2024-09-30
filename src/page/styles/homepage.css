@@ -76,7 +76,8 @@
 
 .homepage-projects {
 	flex-basis: 300px;
-	padding-top: 40px;
+	padding-top: 0px;
+	margin-top: 10px;
 }
 
 .homepage-works {
