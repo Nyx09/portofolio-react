@@ -23,15 +23,9 @@ const MIN_LOGO_SIZE = 40;
 const Homepage = () => {
     const [stayLogo, setStayLogo] = useState(false);
     const [logoSize, setLogoSize] = useState(INITIAL_LOGO_SIZE);
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 500);
 
     useEffect(() => {
         window.scrollTo(0, 0);
-
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 500); 
-        };
-
         const handleScroll = () => {
             const scroll = Math.round(window.pageYOffset);
             const newLogoSize = Math.max(INITIAL_LOGO_SIZE - (scroll * 4) / 10, MIN_LOGO_SIZE);
@@ -40,11 +34,8 @@ const Homepage = () => {
         };
 
         window.addEventListener("scroll", handleScroll);
-        window.addEventListener("resize", handleResize);
-
         return () => 
             window.removeEventListener("scroll", handleScroll);
-            window.removeEventListener("resize", handleResize);
     }, []);
 
     const logoStyle = {
@@ -55,11 +46,10 @@ const Homepage = () => {
         border: stayLogo ? "1px solid white" : "none",
         borderRadius: stayLogo ? "50%" : "none",
         boxShadow: stayLogo ? "0px 4px 10px rgba(0, 0, 0, 0.25)" : "none",
-        width: `${logoSize}px`,  // Dynamic logo size
-        height: `${logoSize}px`,
-        "@media (max-width:400px)": {
-        paddingLeft: "30px", // Padding lebih besar di layar kecil
-        maxWidth: "100%", // Sesuaikan lebar di layar kecil
+       '@media (max-width: 400px)': { 
+        width: "50px",
+        height: "50px",
+        padding: "50px",
     }
        };
 
