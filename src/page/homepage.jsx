@@ -26,7 +26,6 @@ const Homepage = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-
         const handleScroll = () => {
             const scroll = Math.round(window.pageYOffset);
             const newLogoSize = Math.max(INITIAL_LOGO_SIZE - (scroll * 4) / 10, MIN_LOGO_SIZE);
@@ -35,7 +34,8 @@ const Homepage = () => {
         };
 
         window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+        return () => 
+            window.removeEventListener("scroll", handleScroll);
     }, []);
 
     const logoStyle = {
@@ -46,7 +46,12 @@ const Homepage = () => {
         border: stayLogo ? "1px solid white" : "none",
         borderRadius: stayLogo ? "50%" : "none",
         boxShadow: stayLogo ? "0px 4px 10px rgba(0, 0, 0, 0.25)" : "none",
-    };
+       '@media (max-width: 400px)': { 
+        width: "50px",
+        height: "50px",
+        padding: "50px",
+    }
+       };
 
     const handleImageError = (e) => {
         e.target.src = "logo.png"; 

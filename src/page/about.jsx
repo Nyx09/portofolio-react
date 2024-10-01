@@ -23,7 +23,7 @@ const About = () => {
 				<div className="content-wrapper">
 					<div className="about-logo-container">
 						<div className="about-logo">
-							<Logo width={46} />
+							<Logo width={30} />
 						</div>
 					</div>
 

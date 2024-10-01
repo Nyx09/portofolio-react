@@ -48,6 +48,7 @@
 @media (max-width: 600px) {
     .work {
         position: relative; /* Ensure items adjust properly */
+		width: 300px;
     }
 	.work-duration {
         position: static; /* Remove absolute positioning */
