@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faGithub,
-    faInstagram,
+    faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 
@@ -49,7 +49,7 @@ const Homepage = () => {
     };
 
     const handleImageError = (e) => {
-        e.target.src = "logo.png"; // Use a valid fallback image
+        e.target.src = "logo.png"; 
     };
 
     return (
@@ -98,8 +98,8 @@ const Homepage = () => {
                             <a href="https://github.com/Nyx09" target="_blank" rel="noreferrer" aria-label="GitHub">
                                 <FontAwesomeIcon icon={faGithub} className="homepage-social-icon" />
                             </a>
-                            <a href="https://www.instagram.com/nlvn_l09/" target="_blank" rel="noreferrer" aria-label="Instagram">
-                                <FontAwesomeIcon icon={faInstagram} className="homepage-social-icon" />
+                            <a href="https://www.linkedin.com/in/nelvin-lee/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                                <FontAwesomeIcon icon={faLinkedinIn} className="homepage-social-icon" />
                             </a>
                             <a href="mailto:leenelvin9@gmail.com" target="_blank" rel="noreferrer" aria-label="Email">
                                 <FontAwesomeIcon icon={faMailBulk} className="homepage-social-icon" />
