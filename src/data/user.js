@@ -20,7 +20,7 @@ const INFO = {
 	},
 	projects: [
 		{
-			title: "Portofolio",
+			title: "Portfolio",
 			description:
 				"This portfolio project marks the beginning of my journey into the world of web development. It showcases the first React application I built while learning the fundamentals of the framework.",
 			logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
