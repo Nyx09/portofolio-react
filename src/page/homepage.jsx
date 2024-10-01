@@ -58,7 +58,7 @@ const Homepage = () => {
         width: `${logoSize}px`,  // Dynamic logo size
         height: `${logoSize}px`,
         "@media (max-width:400px)": {
-        padding: "20px", // Padding lebih besar di layar kecil
+        paddingLeft: "30px", // Padding lebih besar di layar kecil
         maxWidth: "100%", // Sesuaikan lebar di layar kecil
     }
        };
