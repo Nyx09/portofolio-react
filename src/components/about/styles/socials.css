@@ -12,17 +12,23 @@
 
 .social-icon {
 	font-size: 15px;
-	color: var(--secondary-color);
+	color: var(--);
 }
 
 .social-text {
-	color: var(--secondary-color);
+	color: var(--);
 	padding-left: 30px;
 	margin-top: -20px;
 	font-weight: 600;
 	font-size: 14px;
 }
+.social-icon :hover{
+	color: bisque;
+}
 
+.social-text:hover {
+	color: bisque;
+}
 .email::before {
 	content: "";
 	display: block;

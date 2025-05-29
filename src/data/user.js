@@ -33,6 +33,14 @@ const INFO = {
 			logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
 			linkText: "View Project",
 			link: "https://github.com/Nyx09/dashboardNextjs",
+		},
+		{
+			title: "WebdriverO Automation Testing",
+			description:
+				"This project marks my journey into automation testing using WebdriverIO (WDIO) with Cucumber and Gherkin steps. While developing the automation tests, I focused on leveraging WDIO’s features for efficient test execution and clear test case definitions.",
+			logo: "https://webdriver.io/assets/images/robot-3677788dd63849c56aa5cb3f332b12d5.svg",
+			linkText: "View Project",
+			link: "https://github.com/Nyx09/Automation-Testing"
 		}
 	],
 	about: {
