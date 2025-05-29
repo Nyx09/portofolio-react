@@ -89,7 +89,7 @@ const Homepage = () => {
                                 <div className="homepage-image-container">
                                     <div className="homepage-image-wrapper">
                                         <img
-                                            src="me.jpg"
+                                            src="me.png"
                                             alt="About"
                                             className="homepage-image"
                                             onError={handleImageError}
@@ -103,13 +103,13 @@ const Homepage = () => {
                             <a href="https://github.com/Nyx09" target="_blank" rel="noreferrer" aria-label="GitHub">
                                 <FontAwesomeIcon icon={faGithub} className="homepage-social-icon" />
                             </a>
-                            <a href="https://www.linkedin.com/in/nelvin-lee/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                            {/* <a href="https://www.linkedin.com/in/nelvin-lee/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
                                 <FontAwesomeIcon icon={faLinkedinIn} className="homepage-social-icon" />
-                            </a>
+                            </a> */}
                             <a href="mailto:leenelvin9@gmail.com" target="_blank" rel="noreferrer" aria-label="Email">
                                 <FontAwesomeIcon icon={faMailBulk} className="homepage-social-icon" />
                             </a>
-                            <div className="homepage-btn-download">
+                            {/* <div className="homepage-btn-download">
                                 <a href="/resume.pdf" download="Nelvin_Lee_Resume.pdf">
                                     <button className="homepage-btn-download">
                                          <div style={{ display: 'flex', alignItems: 'center', color:'#2A2E34' }}>
@@ -125,7 +125,7 @@ const Homepage = () => {
                             </div>
                                      </button>
                                 </a>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="homepage-projects">
                             <AllProjects />

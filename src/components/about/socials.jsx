@@ -43,7 +43,7 @@ const Socials = () => {
 				</a>
 			</div>
 
-			<div className="social">
+			{/* <div className="social">
 				<a
 					href={INFO.socials.instagram}
 					target="_blank"
@@ -57,7 +57,7 @@ const Socials = () => {
 					</div>
 					<div className="social-text">Follow on Instagram</div>
 				</a>
-			</div>
+			</div> */}
 
 			<div className="email">
 				<div className="email-wrapper">
