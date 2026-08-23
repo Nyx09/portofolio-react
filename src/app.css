@@ -17,57 +17,48 @@
 	background-color: #7a7a7a; /* Lighter hover color */
 }
 
+body {
+	font-family: var(--primary-font);
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	margin: 0;
+}
+
 .page-content {
-	background-color: #121212; /* Black background for the page */
+	background-color: var(--bg-color);
 	position: relative;
-	color: #e0e0e0; /* Light text for better contrast */
-}
-
-.page-content:before,
-.page-content:after {
-	content: "";
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	width: calc((100% - 1200px) / 2);
-	background-color: #1e1e1e; /* Darker grey background on the sides */
-	border: 1px solid #2a2a2a; /* Darker border color */
-}
-
-.page-content:before {
-	left: 0;
-	z-index: 1;
-}
-
-.page-content:after {
-	right: 0;
-	z-index: 1;
+	color: var(--text-color);
+	min-height: 100vh;
 }
 
 .content-wrapper {
 	max-width: 1000px;
 	margin: 0 auto;
+	padding: 0 20px;
 }
 
 .title {
-	color: #ffd100; /* Using a light purple (material black theme primary) */
+	color: var(--text-color);
 	font-family: var(--secondary-font);
 	font-size: 45px;
 	font-weight: 700;
-	width: 70%;
+	letter-spacing: -0.02em;
+	width: 100%;
 }
 
 .subtitle {
 	padding-top: 10px;
-	color: #e0e0e0; /* Light text for contrast */
+	color: var(--quaternary-color);
 	font-size: 16px;
-	line-height: 28px;
-	width: 70%;
-	margin-top: 25px;
+	line-height: 1.75;
+	width: 100%;
+	margin-top: 15px;
 }
 
 .page-footer {
-	position: block;
+	position: relative;
+	margin-top: 60px;
+	padding-bottom: 40px;
 }
 
 .page-footer::before {
@@ -75,50 +66,24 @@
 	position: absolute;
 	left: 0;
 	right: 0;
-	border-top: 2px solid #090909; /* Teal color (material black theme accent) */
-}
-
-@media (max-width: 1270px) {
-	.page-content:before,
-	.page-content:after {
-		width: calc((100% - 90%) / 2);
-	}
-
-	.content-wrapper {
-		max-width: 90%;
-		padding-left: 10%;
-		padding-right: 10%;
-	}
+	top: 0;
+	border-top: 1px solid var(--border-color);
 }
 
 @media (max-width: 1024px) {
-	.page-content:before,
-	.page-content:after {
-		width: calc((100% - 950px) / 2);
-	}
-
 	.content-wrapper {
-		max-width: 980px;
+		max-width: 90%;
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 
-@media (max-width: 800px) {
-	.content-wrapper {
-		max-width: 90%;
-		margin: 0 auto;
-		padding: 0 10px;
-	}
-
-	.page-content:before,
-	.page-content:after {
-		display: none;
-	}
-
+@media (max-width: 640px) {
 	.title {
-		width: 100%;
+		font-size: 32px;
 	}
-
+	
 	.subtitle {
-		width: 100%;
+		font-size: 14px;
 	}
 }

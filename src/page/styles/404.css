@@ -12,23 +12,23 @@
 .notfound-logo {
 	display: flex;
 	position: fixed;
-	border: 1px solid white;
+	border: 1px solid rgba(255, 255, 255, 0.15);
 	border-radius: 50%;
-	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-	top: 4vh;
+	box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+	top: 24px;
 	z-index: 999;
+	background: rgba(24, 24, 27, 0.8);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	transition: all 0.3s ease;
 }
 
 .notfound-container {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	margin: 0;
 	padding-top: 120px;
 }
 
 .notfound-message {
-	position: fixed;
+	position: absolute;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -36,46 +36,49 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	width: 100%;
+	max-width: 600px;
+	box-sizing: border-box;
+	padding: 0 20px;
 }
 
 .notfound-title {
 	font-family: var(--secondary-font);
-	color: var(--primary-color);
+	color: var(--text-color);
 	font-size: 80px;
-	padding-top: 15px;
 	font-weight: 700;
+	margin: 0;
+	letter-spacing: -0.02em;
 }
 
 .not-found-message {
-	color: var(--secondary-color);
-	font-size: 2rem;
-	margin: 2rem 0;
+	color: var(--quaternary-color);
+	font-size: 1.25rem;
+	line-height: 1.6;
+	margin: 24px 0;
 	text-align: center;
 }
 
 .not-found-link {
-	font-size: 1.5rem;
+	font-size: 1rem;
+	font-weight: 600;
 	text-decoration: none;
-	color: #fff;
-	background-color: var(--link-color);
-	padding: 1rem 2rem;
-	border-radius: 50px;
-	transition: all 0.3s ease-in-out;
+	color: var(--bg-color);
+	background-color: var(--text-color);
+	padding: 12px 28px;
+	border-radius: 9999px;
+	transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .not-found-link:hover {
-	background-color: #fff;
-	color: var(--link-color);
-	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+	transform: translateY(-2px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 500px) {
-	.notfound-message {
-		position: absolute;
-		top: auto;
-		left: auto;
-		width: 100%;
-		transform: none;
+@media (max-width: 600px) {
+	.notfound-container {
+		padding-top: 80px;
 	}
 
 	.notfound-title {
@@ -83,15 +86,11 @@
 	}
 
 	.not-found-message {
-		width: 100%;
 		font-size: 15px;
-		margin-top: 10px;
-		margin-left: -5px;
-		margin-right: 32px;
 	}
 
 	.not-found-link {
-		font-size: 15px;
-		padding: 15px 15px;
+		font-size: 14px;
+		padding: 10px 24px;
 	}
 }

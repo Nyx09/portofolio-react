@@ -41,17 +41,16 @@ const Homepage = () => {
     const logoStyle = {
         display: "flex",
         position: stayLogo ? "fixed" : "relative",
-        top: stayLogo ? "3vh" : "auto",
+        top: stayLogo ? "24px" : "auto",
         zIndex: 999,
-        border: stayLogo ? "1px solid white" : "none",
+        border: stayLogo ? "1px solid rgba(255, 255, 255, 0.15)" : "none",
         borderRadius: stayLogo ? "50%" : "none",
-        boxShadow: stayLogo ? "0px 4px 10px rgba(0, 0, 0, 0.25)" : "none",
-       '@media (max-width: 400px)': { 
-        width: "50px",
-        height: "50px",
-        padding: "50px",
-    }
-       };
+        boxShadow: stayLogo ? "0px 10px 30px rgba(0, 0, 0, 0.5)" : "none",
+        background: stayLogo ? "rgba(24, 24, 27, 0.8)" : "transparent",
+        backdropFilter: stayLogo ? "blur(8px)" : "none",
+        WebkitBackdropFilter: stayLogo ? "blur(8px)" : "none",
+        transition: "all 0.3s ease"
+    };
 
     const handleImageError = (e) => {
         e.target.src = "logo.png"; 
@@ -109,10 +108,10 @@ const Homepage = () => {
                             <a href="mailto:leenelvin9@gmail.com" target="_blank" rel="noreferrer" aria-label="Email">
                                 <FontAwesomeIcon icon={faMailBulk} className="homepage-social-icon" />
                             </a>
-                            <div className="homepage-btn-download">
-                                <a href="/resume.pdf" download="Nelvin_Lee_Resume.pdf">
+                            <div className="homepage-btn-download-wrapper">
+                                <a href="/resume.pdf" download="Nelvin_Lee_Resume.pdf" style={{ textDecoration: 'none' }}>
                                     <button className="homepage-btn-download">
-                                         <div style={{ display: 'flex', alignItems: 'center', color:'#2A2E34' }}>
+                                         <div style={{ display: 'flex', alignItems: 'center' }}>
                                             <svg
                                             className="homepage-btn-icon-svg"
                                             viewBox="0 0 384 512"
@@ -121,8 +120,8 @@ const Homepage = () => {
                                             >
                                             <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>
                                             </svg>
-                                <span className="homepage-btn-text" style={{ marginLeft: '10px', color: "black", fontFamily:"Heebo"}}>Download Resume</span>
-                            </div>
+                                            <span className="homepage-btn-text">Download Resume</span>
+                                         </div>
                                      </button>
                                 </a>
                             </div>

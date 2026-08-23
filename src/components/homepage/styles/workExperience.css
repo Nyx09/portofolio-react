@@ -1,60 +1,90 @@
 @import "../../../data/styles.css";
 
+
 .works-body {
-	margin-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 }
 
 .work {
-	display: flex;
-	padding-bottom: 40px;
-	width: 400px;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	grid-template-rows: auto auto;
+	column-gap: 16px;
+	row-gap: 4px;
+	align-items: center;
+	padding: 16px 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+	width: 100%;
+}
+
+.work:last-child {
+	border-bottom: none;
+	padding-bottom: 0;
 }
 
 .work-image {
-	height: 30px;
-	width: 30px;
+	grid-column: 1;
+	grid-row: 1 / span 2;
+	width: 40px;
+	height: 40px;
 	border-radius: 50%;
-	outline: 6px solid white;
-	box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.25);
+	object-fit: cover;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .work-title {
+	grid-column: 2;
+	grid-row: 1;
 	font-size: 15px;
-	font-weight: 700;
-	padding-left: 20px;
-	margin-top: -3px;
-	padding-left: 50px;
-	position: absolute;
-	color: var(--quantery-color);
+	font-weight: 600;
+	color: var(--text-color);
 }
 
 .work-subtitle {
-	position: absolute;
-	font-size: 12px;
-	color: var(--quantery-color);
-	padding-top: 22px;
-	padding-left: 50px;
+	grid-column: 2;
+	grid-row: 2;
+	font-size: 13px;
+	color: var(--quaternary-color);
 }
 
 .work-duration {
-	position: absolute;
-	width: 350px;
-	font-size: 12px;
-	padding-top: 20px;
+	grid-column: 3;
+	grid-row: 1 / span 2;
+	font-size: 13px;
+	color: var(--quaternary-color);
 	text-align: right;
-	position: absolute;
-	color: var(--quantery-color);
+	align-self: center;
 }
+
 @media (max-width: 600px) {
-    .work {
-        position: relative; /* Ensure items adjust properly */
-		width: 300px;
-    }
+	.work {
+		grid-template-columns: auto 1fr;
+		grid-template-rows: auto auto auto;
+	}
+
+	.work-image {
+		grid-row: 1 / span 3;
+		align-self: flex-start;
+		margin-top: 4px;
+	}
+
+	.work-title {
+		grid-column: 2;
+		grid-row: 1;
+	}
+
+	.work-subtitle {
+		grid-column: 2;
+		grid-row: 2;
+	}
+
 	.work-duration {
-        position: static; /* Remove absolute positioning */
-        padding-left: 19px; /* Align with subtitle */
-        padding-top: 10px; /* Add space below subtitle */
-        margin-top: 30px;
-        text-align: left; /* Align text to the left */
-    }
+		grid-column: 2;
+		grid-row: 3;
+		text-align: left;
+		margin-top: 4px;
+	}
 }

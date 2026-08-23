@@ -1,14 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
 :root {
 	/* ------- colors ------- */
-	--primary-color: #1E2328;
-	--secondary-color: #2A2E34;
-	--tertiary-color: #F5B301;
-	--quaternary-color: #e4e4e7;
-	--link-color: #14b8a6;
+	--bg-color: #09090b;          /* Zinc-950 */
+	--primary-color: #18181b;     /* Zinc-900 */
+	--secondary-color: #27272a;   /* Zinc-800 */
+	--tertiary-color: #f59e0b;    /* Amber-500 */
+	--quaternary-color: #a1a1aa;  /* Zinc-400 */
+	--link-color: #3b82f6;        /* Blue-500 */
+	--text-color: #fafafa;        /* Zinc-50 */
+	--border-color: rgba(63, 63, 70, 0.4); /* Zinc-700 translucent */
 	/* ---------------------- */
 
 	/* ------- fonts ------- */
-	--primary-font: "Heebo", sans-serif;
-	--secondary-font: "Roboto", sans-serif;
+	--primary-font: "Space Grotesk", sans-serif;
+	--secondary-font: "Archivo", sans-serif;
 	/* --------------------- */
 }

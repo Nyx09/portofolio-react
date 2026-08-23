@@ -7,26 +7,30 @@
 .about-logo {
 	display: flex;
 	position: fixed;
-	border: 1px solid white;
+	border: 1px solid rgba(255, 255, 255, 0.15);
 	border-radius: 50%;
-	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-	top: 4vh;
+	box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+	top: 24px;
+	z-index: 999;
+	background: rgba(24, 24, 27, 0.8);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	transition: all 0.3s ease;
 }
 
 .about-container {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	margin: 0;
 	padding-top: 120px;
 }
 
 .about-main {
-	display: flex;
+	display: grid;
+	grid-template-columns: 1.2fr 0.8fr;
+	gap: 48px;
 }
 
 .about-right-side {
-	flex-basis: 900px;
+	display: flex;
+	flex-direction: column;
 }
 
 .about-title {
@@ -34,66 +38,61 @@
 }
 
 .about-subtitle {
-	width: 80% !important;
+	width: 100% !important;
+	margin-top: 20px;
 }
 
 .about-left-side {
 	display: flex;
 	flex-direction: column;
-	flex-basis: 300px;
+	align-items: center;
 }
 
 .about-image-container {
-	width: 370px;
+	position: relative;
+	width: 100%;
+	max-width: 280px;
+	display: flex;
+	justify-content: center;
 }
 
 .about-image-wrapper {
-	display: inline-block;
-	overflow: hidden;
 	width: 100%;
-	border-radius: 10%;
-	transform: rotate(3deg);
+	aspect-ratio: 1;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 3px solid rgba(255, 255, 255, 0.05);
+	box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
 }
 
 .about-image-wrapper img {
 	display: block;
 	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .about-socials {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 32px;
+	width: 100%;
 }
 
 .about-socials-mobile {
 	display: none;
 }
 
-@media (max-width: 1024px) {
-	.about-logo {
-		z-index: 100;
-	}
-
+@media (max-width: 900px) {
 	.about-main {
-		flex-direction: column;
-	}
-
-	.about-subtitle {
-		padding-top: 20px !important;
+		grid-template-columns: 1fr;
+		gap: 32px;
 	}
 
 	.about-left-side {
-		flex-basis: 100%;
 		order: 1;
 	}
 
 	.about-right-side {
-		flex-basis: 100%;
 		order: 2;
-	}
-
-	.about-image-container {
-		padding-bottom: 40px;
 	}
 
 	.about-socials {
@@ -101,17 +100,16 @@
 	}
 
 	.about-socials-mobile {
-		padding-top: 30px;
+		padding-top: 24px;
 		display: flex;
+		justify-content: flex-start;
+		width: 100%;
+		order: 3;
 	}
 }
 
 @media (max-width: 600px) {
 	.about-container {
-		padding-top: 60px;
-	}
-
-	.about-image-container {
-		width: 80%;
+		padding-top: 80px;
 	}
 }
