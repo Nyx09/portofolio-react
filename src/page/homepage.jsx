@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import HeroSection from '../components/HeroSection';
-import MarqueeSection from '../components/MarqueeSection';
+// import MarqueeSection from '../components/MarqueeSection'; // Uncomment to restore Marquee Section
 import AboutSection from '../components/AboutSection';
 import ServicesSection from '../components/ServicesSection';
 import ProjectsSection from '../components/ProjectsSection';
@@ -20,8 +20,8 @@ const Homepage = () => {
       {/* 1. HERO SECTION */}
       <HeroSection />
 
-      {/* 2. MARQUEE SECTION */}
-      <MarqueeSection />
+      {/* 2. MARQUEE SECTION (DISABLED BY USER REQUEST - UNCOMMENT TO RESTORE) */}
+      {/* <MarqueeSection /> */}
 
       {/* 3. ABOUT SECTION */}
       <AboutSection />
