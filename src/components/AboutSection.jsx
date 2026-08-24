@@ -108,7 +108,7 @@ export const AboutSection = () => {
         <FadeIn delay={0.2} y={20} duration={0.7}>
           <ContactButton
             href="mailto:leenelvin9@gmail.com?subject=Kolaborasi%20SDET%20%26%20Frontend%20-%20Niel"
-            label="Kirim Pesan / Konsultasi"
+            label="Kirim Pesan"
           />
         </FadeIn>
       </div>
