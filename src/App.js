@@ -1,28 +1,17 @@
-import { Routes, Route } from "react-router-dom";
-// import ReactGA from "react-ga4";
-
-import Homepage from "./page/homepage";
-import About from "./page/about";
-import Notfound from "./page/404";
-import Project from "./page/project";
-import Contact from "./page/contact"
-import "./app.css";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Homepage from './page/homepage';
+import './index.css';
 
 function App() {
-
-
-	return (
-		<div className="App">
-			<Routes>
-				<Route path="/" element={<Homepage />} />
-				<Route path="/about" element={<About/>} />
-				<Route path="/projects" element={<Project/>}/>
-				<Route path="/contact" element={<Contact/>}/>
-				<Route path="*" element={<Notfound/>}/>
-				
-			</Routes>
-		</div>
-	);
+  return (
+    <div className="App bg-[#0C0C0C] min-h-screen text-[#D7E2EA] font-kanit overflow-x-clip">
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="*" element={<Homepage />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;

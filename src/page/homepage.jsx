@@ -1,146 +1,38 @@
-import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faGithub,
-    faLinkedinIn,
-} from "@fortawesome/free-brands-svg-icons";
-import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
-
-import Logo from "../components/logo";
-import NavBar from "../components/navbar";
-import Footer from "../components/footer";
-import Works from "../components/homepage/workExperience";
-import AllProjects from "../components/projects/allProjects";
-
-import INFO from "../data/user";
-import "./styles/homepage.css";
-
-// Constants for logo size
-const INITIAL_LOGO_SIZE = 80;
-const MIN_LOGO_SIZE = 40;
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import HeroSection from '../components/HeroSection';
+import MarqueeSection from '../components/MarqueeSection';
+import AboutSection from '../components/AboutSection';
+import ServicesSection from '../components/ServicesSection';
+import ProjectsSection from '../components/ProjectsSection';
 
 const Homepage = () => {
-    const [stayLogo, setStayLogo] = useState(false);
-    const [logoSize, setLogoSize] = useState(INITIAL_LOGO_SIZE);
+  return (
+    <div className="w-full min-h-screen bg-[#0C0C0C] text-[#D7E2EA] font-kanit overflow-x-clip">
+      <Helmet>
+        <title>Niel -- Jasa Landing Page Ringan</title>
+        <meta
+          name="description"
+          content="Niel -- Web Creator & spesialis pembuatan landing page ringan, modern, cepat, dan berkonversi tinggi."
+        />
+      </Helmet>
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-        const handleScroll = () => {
-            const scroll = Math.round(window.pageYOffset);
-            const newLogoSize = Math.max(INITIAL_LOGO_SIZE - (scroll * 4) / 10, MIN_LOGO_SIZE);
-            setLogoSize(newLogoSize);
-            setStayLogo(newLogoSize <= MIN_LOGO_SIZE);
-        };
+      {/* 1. HERO SECTION */}
+      <HeroSection />
 
-        window.addEventListener("scroll", handleScroll);
-        return () => 
-            window.removeEventListener("scroll", handleScroll);
-    }, []);
+      {/* 2. MARQUEE SECTION */}
+      <MarqueeSection />
 
-    const logoStyle = {
-        display: "flex",
-        position: stayLogo ? "fixed" : "relative",
-        top: stayLogo ? "24px" : "auto",
-        zIndex: 999,
-        border: stayLogo ? "1px solid rgba(255, 255, 255, 0.15)" : "none",
-        borderRadius: stayLogo ? "50%" : "none",
-        boxShadow: stayLogo ? "0px 10px 30px rgba(0, 0, 0, 0.5)" : "none",
-        background: stayLogo ? "rgba(24, 24, 27, 0.8)" : "transparent",
-        backdropFilter: stayLogo ? "blur(8px)" : "none",
-        WebkitBackdropFilter: stayLogo ? "blur(8px)" : "none",
-        transition: "all 0.3s ease"
-    };
+      {/* 3. ABOUT SECTION */}
+      <AboutSection />
 
-    const handleImageError = (e) => {
-        e.target.src = "logo.png"; 
-    };
+      {/* 4. SERVICES SECTION (JASA LANDING PAGE RINGAN) */}
+      <ServicesSection />
 
-    return (
-        <React.Fragment>
-            <Helmet>
-                <title>Nelvin Lee</title>
-                <meta name="description" content="Homepage description" />
-                <meta name="keywords" content="homepage, portfolio, projects" />
-            </Helmet>
-
-            <div className="page-content">
-                <NavBar active="home" />
-                <div className="content-wrapper">
-                    <div className="homepage-logo-container">
-                        <div style={logoStyle}>
-                            <Logo width={logoSize} link={false} />
-                        </div>
-                    </div>
-
-                    <div className="homepage-container">
-                        <div className="homepage-first-area">
-                            <div className="homepage-first-area-left-side">
-                                <div className="title homepage-title ">
-                                {INFO.homepage.title}
-                                </div>
-                                <div className="subtitle homepage-subtitle">
-                                    {INFO.homepage.description}
-                                </div>
-                            </div>
-
-                            <div className="homepage-first-area-right-side">
-                                <div className="homepage-image-container">
-                                    <div className="homepage-image-wrapper">
-                                        <img
-                                            src="me.png"
-                                            alt="About"
-                                            className="homepage-image"
-                                            onError={handleImageError}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="homepage-socials">
-                            <a href="https://github.com/Nyx09" target="_blank" rel="noreferrer" aria-label="GitHub">
-                                <FontAwesomeIcon icon={faGithub} className="homepage-social-icon" />
-                            </a>
-                            <a href="https://www.linkedin.com/in/nelvin-lee/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                                <FontAwesomeIcon icon={faLinkedinIn} className="homepage-social-icon" />
-                            </a>
-                            <a href="mailto:leenelvin9@gmail.com" target="_blank" rel="noreferrer" aria-label="Email">
-                                <FontAwesomeIcon icon={faMailBulk} className="homepage-social-icon" />
-                            </a>
-                            <div className="homepage-btn-download-wrapper">
-                                <a href="/resume.pdf" download="Nelvin_Lee_Resume.pdf" style={{ textDecoration: 'none' }}>
-                                    <button className="homepage-btn-download">
-                                         <div style={{ display: 'flex', alignItems: 'center' }}>
-                                            <svg
-                                            className="homepage-btn-icon-svg"
-                                            viewBox="0 0 384 512"
-                                            height="1em"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                            <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>
-                                            </svg>
-                                            <span className="homepage-btn-text">Download Resume</span>
-                                         </div>
-                                     </button>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="homepage-projects">
-                            <AllProjects />
-                        </div>
-                        <div className="homepage-works">
-                            <Works />
-                        </div>
-                    </div>
-                    <div className="page-footer">
-                        <Footer />
-                    </div>
-                   
-                </div>
-            </div>
-        </React.Fragment>
-    );
+      {/* 5. PROJECTS SECTION & KONTAK */}
+      <ProjectsSection />
+    </div>
+  );
 };
 
 export default Homepage;

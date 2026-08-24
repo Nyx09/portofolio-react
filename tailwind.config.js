@@ -2,18 +2,19 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
+    "./public/index.html"
   ],
   theme: {
-    extend: { 
-      'mobile' : '320px',
-
-      'tablet': '640px',
-      // => @media (min-width: 640px) { ... }
-
-      'laptop': '1024px',
-      // => @media (min-width: 1024px) { ... }
-
-      'desktop': '1280px'},
+    extend: {
+      fontFamily: {
+        kanit: ['Kanit', 'sans-serif'],
+        sans: ['Kanit', 'sans-serif'],
+      },
+      colors: {
+        dark: '#0C0C0C',
+        textLight: '#D7E2EA',
+      },
+    },
   },
   plugins: [],
 }

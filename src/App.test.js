@@ -8,6 +8,6 @@ test('renders App and checks user name', () => {
       <App />
     </MemoryRouter>
   );
-  const nameElement = screen.getAllByText(/Nelvin Lee/i);
+  const nameElement = screen.getAllByText(/Niel/i);
   expect(nameElement.length).toBeGreaterThan(0);
 });
