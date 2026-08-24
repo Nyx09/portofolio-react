@@ -6,7 +6,7 @@ import { ContactButton } from './ContactButton';
 export const HeroSection = () => {
   const navLinks = [
     { name: "Tentang", href: "#about" },
-    { name: "Layanan", href: "#services" },
+    { name: "Skill", href: "#skills" },
     { name: "Proyek", href: "#projects" },
     { name: "Kontak", href: "mailto:leenelvin9@gmail.com?subject=Kolaborasi%20SDET%20%26%20Frontend%20-%20Niel" },
   ];

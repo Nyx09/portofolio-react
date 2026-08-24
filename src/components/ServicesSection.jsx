@@ -70,20 +70,20 @@ export const ServicesSection = () => {
 
   return (
     <section
-      id="services"
+      id="skills"
       className="relative min-h-screen w-full flex flex-col justify-center px-4 sm:px-8 md:px-12 py-24 sm:py-32 bg-[#0C0C0C]"
     >
       <div className="max-w-5xl mx-auto w-full">
         {/* Section Heading */}
         <FadeIn delay={0} y={40} duration={0.8} className="w-full text-center mb-16 sm:mb-20">
           <span className="text-xs sm:text-sm uppercase tracking-widest text-[#D7E2EA]/60 font-medium block mb-3">
-            Spesialisasi & Kapabilitas
+            Keahlian &amp; Kapabilitas
           </span>
           <h2
             className="hero-heading font-black uppercase text-center leading-none tracking-tight"
             style={{ fontSize: 'clamp(3rem, 10vw, 130px)' }}
           >
-            Layanan
+            Skill
           </h2>
         </FadeIn>
 
