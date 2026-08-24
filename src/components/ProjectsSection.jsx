@@ -79,21 +79,21 @@ export const ProjectsSection = () => {
       <div id="contact" className="max-w-5xl mx-auto w-full pt-16 sm:pt-24 border-t border-[#D7E2EA]/15 text-center relative z-20">
         <FadeIn delay={0.1} y={30}>
           <span className="text-xs sm:text-sm uppercase tracking-widest text-[#D7E2EA]/60 font-medium block mb-4">
-            Mulai Kolaborasi
+            Hubungi Saya
           </span>
           <h3
             className="hero-heading font-black uppercase tracking-tight leading-none mb-8"
             style={{ fontSize: 'clamp(2.5rem, 8vw, 6rem)' }}
           >
-            Mari Bangun Solusi Digital Berkualitas
+            Mari Terhubung &amp; Berkolaborasi
           </h3>
           <p className="text-[#D7E2EA]/80 font-light max-w-xl mx-auto mb-10 text-sm sm:text-base leading-relaxed">
-            Tertarik berdiskusi mengenai Test Automation (Appium/WDIO), Quality Assurance, atau pengembangan Frontend Web (React/Next.js)? Hubungi saya langsung via email!
+            Terbuka untuk peluang karir, project automation testing, atau frontend development. Jangan ragu untuk menyapa!
           </p>
           <div className="flex justify-center mb-16">
             <ContactButton
               href="mailto:leenelvin9@gmail.com?subject=Kolaborasi%20SDET%20%26%20Frontend%20-%20Niel"
-              label="Kirim Email Sekarang"
+              label="Kirim Email"
             />
           </div>
 
