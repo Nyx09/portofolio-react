@@ -10,10 +10,10 @@ const Homepage = () => {
   return (
     <div className="w-full min-h-screen bg-[#0C0C0C] text-[#D7E2EA] font-kanit overflow-x-clip">
       <Helmet>
-        <title>Niel -- Jasa Landing Page Ringan</title>
+        <title>Niel -- SDET &amp; Frontend Developer</title>
         <meta
           name="description"
-          content="Niel -- Web Creator & spesialis pembuatan landing page ringan, modern, cepat, dan berkonversi tinggi."
+          content="Niel -- SDET & Frontend Developer dengan keahlian Test Automation, Quality Assurance, dan Web Development modern."
         />
       </Helmet>
 
@@ -26,7 +26,7 @@ const Homepage = () => {
       {/* 3. ABOUT SECTION */}
       <AboutSection />
 
-      {/* 4. SERVICES SECTION (JASA LANDING PAGE RINGAN) */}
+      {/* 4. SERVICES SECTION (SDET & FRONTEND) */}
       <ServicesSection />
 
       {/* 5. PROJECTS SECTION & KONTAK */}
